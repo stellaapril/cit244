@@ -10,5 +10,19 @@ package objectmodelspractice;
  * @author sitian.chen
  */
 public class Antiquecar extends Vehicle{
+    public boolean hasSafebelt;
+    
+    public int headingInDeg;
+    
+    @Override
+    public void turn(int deg){
+        // guts must be written here;
+        //does this Car even maintain its heading?
+        //To properly implement, perhaps we want a member
+        //variable that stores the Vehicle's heading
+        
+        headingInDeg = headingInDeg +deg;
+        
+    }
     
 }

@@ -10,5 +10,7 @@ package objectmodelspractice;
  * @author sitian.chen
  */
 public class Vehicleland {
-    
+    public static void main(String[] args){
+        Vehicle c = new Vehicle();
+    }
 }

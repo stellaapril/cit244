@@ -9,7 +9,7 @@ package objectmodelspractice;
  *
  * @author sitian.chen
  */
-public class Vehicle {
+public abstract class Vehicle implements Turnable{
     //public variables
     public String vin;
     public String color;
@@ -18,8 +18,7 @@ public class Vehicle {
     public int totalkm;
     public int year;
     
-    //safety variables
-    public boolean hasAirbagornot;
+    
     
     //private variables
     private boolean isEnginerunning;
