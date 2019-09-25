@@ -5,12 +5,28 @@
  */
 package objectmodelspractice;
 
+import inheritancepractice.CrashTestable;
+
 /**
  *
  * @author sitian.chen
  */
 public class Vehicleland {
     public static void main(String[] args){
-        Vehicle c = new Vehicle();
+        Antiquecar c = new Antiquecar();
+    }
+    
+    public static double crash(CrashTestable ct){
+        double score=0.0;
+        
+        if(ct.driverAirbagPresent()){
+            score=score+1;
+        }
+        if(ct.getFrontBumberHeight()<15){
+            score=score+1.23;
+        }
+        
+        
+        return score;
     }
 }
