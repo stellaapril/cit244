@@ -5,6 +5,8 @@
  */
 package carmodelspractice;
 
+import inheritancepractice.CrashTestable;
+
 /**
  *
  * @author cst
@@ -16,5 +18,18 @@ public class VehicleLand {
         System.out.println(v.getVehicleYear());
     }
     
+        public static double crash(CrashTestable ct){
+        double score=0.0;
+        
+        if(ct.driverAirbagPresent()){
+            score=score+1;
+        }
+        if(ct.getFrontBumberHeight()<15){
+            score=score+1.23;
+        }
+        
+        
+        return score;
+    }
     
 }
