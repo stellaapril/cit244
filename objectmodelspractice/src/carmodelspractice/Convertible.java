@@ -5,58 +5,23 @@
  */
 package carmodelspractice;
 
-import inheritancepractice.CrashTestable;
 import inheritancepractice.DrivingMode;
+
+
 
 /**
  *
  * @author cst
  */
-public class Convertible extends Vehicle implements CrashTestable{
-
-    @Override
-    public int getVehicleYear() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public class Convertible extends Vehicle{
+    public Convertible(){
+        
+    }
+    
+    public Convertible(String carname,int caryear,double carweight,double bumperheight,boolean airbag,double lengthofwheelbase,DrivingMode dm){
+        super(carname,caryear,carweight,bumperheight,airbag,lengthofwheelbase,dm);
     }
 
-    @Override
-    public DrivingMode getDrivingMode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double getVehicleWeight() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double getFrontBumberHeight() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String frameMaterialIdentifer() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean driverAirbagPresent() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double getLengthOfWheelBase() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double getFrontWeightLevelWeight() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double getFrontWeightWhenRaised() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
 }

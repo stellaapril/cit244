@@ -20,8 +20,8 @@ public class SUV extends Vehicle implements CrashTestable{
         
     }
     
-    public SUV(int year,String brand,int door){
-        super(year,brand,door);
+    public SUV(String carname,int caryear,double carweight,double bumperheight,boolean airbag,double lengthofwheelbase,DrivingMode dm){
+        super(carname,caryear,carweight,bumperheight,airbag,lengthofwheelbase,dm);
         
     }
 

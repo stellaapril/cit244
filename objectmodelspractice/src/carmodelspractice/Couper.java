@@ -18,10 +18,11 @@ public class Couper extends Vehicle implements CrashTestable{
         
     }
     
-    public Couper(int year,String brand,int door){
-        super(year,brand,door);
-        
+    public Couper(String carname,int caryear,double carweight,double bumperheight,boolean airbag,double lengthofwheelbase,DrivingMode dm){
+        super(carname,caryear,carweight,bumperheight,airbag,lengthofwheelbase,dm);
     }
+    
+
     
 
     @Override
