@@ -7,6 +7,8 @@ package carmodelspractice;
 
 import inheritancepractice.CrashTestable;
 import inheritancepractice.DrivingMode;
+import objectmodels.SuperCar;
+import objectmodels.Truck;
 
 /**
  *
@@ -14,27 +16,33 @@ import inheritancepractice.DrivingMode;
  */
 public class VehicleLand {
     public static void main(String[] args) {
-        //constructor name,year,weight,bunberheight,airbag
+        
+        //constructor name,year,weight,bunberheight,airbag,DrivingMode
         Van honda = new Van("odyssey",2010,4640,22,true,118.1,DrivingMode.ECO);
         SUV jeep = new SUV("grand_cherokee",2015,5150,24,true,114.8,DrivingMode.SNOW);
         Couper ford = new Couper("mustang",2014,3735,14,true,107.1,DrivingMode.SPORTY);
         Hatchback civic = new Hatchback("civic",1995,2390,14,true,103.2,DrivingMode.NULL);
         Convertible bmw = new Convertible("4series",2018,4270,16,true,110.6,DrivingMode.SPORTY);
+        SuperCar matt_supercar = new SuperCar();
         
+        //display method
         display(jeep);
         display(honda);
         display(ford);
         display(civic);
         display(bmw);
+        System.out.println("Test Result of Matt'supercar : "+crash(matt_supercar));
+        
         
     }
-    
+        //diaplay the result of crash test
         public static void display(Vehicle v){
             
             System.out.println("Test Result of "+v.name+"is: "+crash(v));
             
         }
-    
+        
+        //crash testable result logical
         public static double crash(CrashTestable ct){
         double score=0.0;
         if(ct.getVehicleYear()>2010){

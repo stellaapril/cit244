@@ -25,6 +25,10 @@ public abstract class Vehicle implements CrashTestable{
     int numOfdoors;
     double headingInDeg;
     
+
+    boolean isEnginerunning;
+    boolean checkLightstatus;
+    
     
     double weight;
     double frontBumberHeight;
@@ -50,6 +54,34 @@ public abstract class Vehicle implements CrashTestable{
         drivingmode=dm;
      
     }
+    
+     public void startCar(){
+        isEnginerunning = true;
+    }//close startCar
+    
+    public void stopCar(){
+        isEnginerunning = false;
+    }//close stopCar
+    
+    
+    public double accelerate(int increasemph){
+        speed = speed+increasemph;
+        return speed;
+    }//close method
+    
+    public double deaccelerate(int decreasemph){
+        speed = speed+decreasemph;
+        return speed;
+    }//close method
+    
+    public boolean checkLightstatus(){
+        if(checkLightstatus == true){
+            System.out.println("Light is on");
+        }else{
+            System.out.println("Light is not on");
+        }
+        return checkLightstatus;
+    }//close method
 
     @Override
     public int getVehicleYear() {
