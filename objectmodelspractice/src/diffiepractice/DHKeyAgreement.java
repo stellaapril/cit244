@@ -13,21 +13,13 @@ import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
 import javax.crypto.Cipher;
 import javax.crypto.KeyAgreement;
-import javax.crypto.ShortBufferException;
+
 import javax.crypto.interfaces.DHPublicKey;
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 
-import java.io.*;
-import java.math.BigInteger;
-import java.security.*;
-import java.security.spec.*;
-import java.security.interfaces.*;
-import javax.crypto.*;
-import javax.crypto.spec.*;
-import javax.crypto.interfaces.*;
-import com.sun.crypto.provider.SunJCE;
+
 
 /**
  *
@@ -92,14 +84,15 @@ public class DHKeyAgreement {
         
         //jerry and tom have completed the dh key
         
-        try{
+        
+//        try{
             byte[] jerrySharedSecret = jerryKeyAgree.generateSecret();
             int jerryLen = jerrySharedSecret.length;
             byte[] tomSharedSecret = new byte[jerryLen];
             int tomLen;
-        }catch (ShortBufferException e) {
-            System.out.println(e.getMessage());
-        } // provide output buffer of required size
+//        }catch (ShortBufferException e) {
+//            System.out.println(e.getMessage());
+//        } // provide output buffer of required size
          
         tomLen = tomKeyAgree.generateSecret(tomSharedSecret, 0);
         System.out.println("Jerry secret: " +
