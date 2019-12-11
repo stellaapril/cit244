@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hashingpractice;
+package cryptpgraphy;
 
+import hashingpractice.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -20,7 +21,7 @@ import javax.swing.JTextField;
  *
  * @author cst
  */
-public class HashView {
+public class View {
     //declare JFrame
     private static JFrame frame;
     
